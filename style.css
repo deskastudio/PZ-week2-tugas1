@@ -11,6 +11,18 @@ body {
     background-color: #f9f9f9;
 }
 
+.help-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #bbb;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -19,33 +31,35 @@ body {
 
 header {
     text-align: center;
-    background-color: #24292e;
+    background-color: #222222;
     color: white;
     padding: 50px 0;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-header h1 span {
-    color: #28a745;
+    display: block;
+    width: 169px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 header h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: center;
 }
 
 header p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    color: #a7a7a7;
+    line-height: 1.5em;
+    max-width: none;
+    margin: 10px auto 60px;
+    font-size: 18px;
 }
 
 header a {
-    color: #28a745;
-    text-decoration: none;
+    color: #ffff;
 }
 
 header .header-image {
@@ -55,32 +69,55 @@ header .header-image {
 }
 
 .get-started {
-    text-align: center;
     padding: 50px 0;
     background-color: #f8f8f8;
 }
 
 .get-started h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin: 90px auto 0 auto;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: center;
+    max-width: 910px;
+    color: #333;
 }
 
 .get-started p {
-    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 200;
+    line-height: 38px;
+    margin: 40px auto 0;
+    font-size: 21px;
+    max-width: 740px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.buttons .button-blue {
+    background-color: #327FC7;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid gray;
+}
+
+.buttons .button-project {
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid gray;
 }
 
 .buttons button {
     padding: 10px 20px;
-    border: none;
     cursor: pointer;
     font-size: 1.1rem;
-    border-radius: 5px;
 }
 
 .buttons .primary {
@@ -97,9 +134,50 @@ header .header-image {
     padding: 50px 0;
 }
 
+.steps .step1 {
+    text-align: center;
+    display: flex;  
+    background-color: white;
+    margin-bottom: 40px;
+}
+
+.steps .step1 .textRepo {
+    border: 0.5px solid gray;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.steps .step1 .textRepo a {
+    color: #327FC7;
+    text-decoration: none;
+}
+
+.steps .step1 .textRepo h1 {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.steps .step1 .textRepo h5 {
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.steps .step1 .textRepo p {
+    font-size: 0.8rem;
+}
+
+.steps .step1 img {
+    width: 50%;
+    border: 0.5px solid gray;
+}
+
 .steps .step {
     margin-bottom: 40px;
     text-align: center;
+    background-color: white;
+    padding: 25px;
 }
 
 .steps .step h3 {

@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages</title>
+    <title>Re-Design Github Pages | Deska Mulyana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- header section start -->
     <header>
         <div class="container">
-            <h1>GitHub<span>Pages</span></h1>
+            <button class="help-link">Pages Help</button>
+            <h1><span>GitHub</span>Pages</h1>
             <h2>Websites for you and your projects.</h2>
-            <p>Hosted directly from your <a href="#">GitHub</a> repository. Just edit, push, and your changes are live.</p>
-            <img src="header-image.png" alt="Website preview" class="header-image">
+            <p>Hosted directly from your <a href="#">GitHub repository</a> Just edit, push, and your changes are live.</p>
+            <img src="header-image.png" alt="Header Image" class="header-image">
         </div>
     </header>
+    <!-- header section end -->
 
+    <!-- get started section start -->
     <section class="get-started">
         <div class="container">
             <h2>Ready to get started? Build your own site from scratch or generate one for your project.</h2>
             <p>You get one site per GitHub account and organization, and unlimited project sites. Let's get started.</p>
             <div class="buttons">
-                <button class="primary">User or organization site</button>
-                <button class="secondary">Project site</button>
+                <button class="button-blue">User or organization site</button>
+                <button class="button-project">Project site</button>
             </div>
         </div>
     </section>
+    <!-- get started section end -->
 
+    <!-- steps section start -->
     <section class="steps">
         <div class="container">
-            <div class="step">
-                <h3>Create a repository</h3>
-                <p>Head over to GitHub and create a new public repository named <strong>username.github.io</strong>, where <em>username</em> is your GitHub username.</p>
-                <img src="create-repo.png" alt="Create repository screenshot">
+            <div class="step1">
+                <div class="textRepo">
+                    <h1>Create a repository</h1>
+                    <h5>Head over to <a href="">GitHub </a>and <a href="">create a new public repository</a> named <em>username</em>.github.io, where <em>username</em> (or organization name) on GitHub</h5>
+                    <p>If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.</p>
+                </div>
+                <img src="assets/createRepo.png" alt="Create Repo">
             </div>
             <div class="step">
                 <h3>What git client are you using?</h3>
@@ -45,20 +54,19 @@
             <div class="step">
                 <h3>Clone the repository</h3>
                 <p>Go to the folder where you want to store your project, and clone the new repository:</p>
-                <pre><code>$ git clone https://github.com/username/username.github.io</code></pre>
+                <div class="command">$ git clone https://github.com/username/username.github.io</div>
             </div>
             <div class="step">
                 <h3>Hello World</h3>
                 <p>Enter the project folder and add an index.html file:</p>
-                <pre><code>$ cd username.github.io
-$ echo "Hello World" > index.html</code></pre>
+                <div class="command">$ echo "Hello World" > index.html</div>
             </div>
             <div class="step">
                 <h3>Push it</h3>
                 <p>Add, commit, and push your changes:</p>
-                <pre><code>$ git add --all
-$ git commit -m "Initial commit"
-$ git push -u origin main</code></pre>
+                <div class="command">$ git add --all</div>
+                <div class="command">$ git commit -m "Initial commit"</div>
+                <div class="command">$ git push -u origin main</div>
             </div>
             <div class="step">
                 <h3>...and you're done!</h3>
@@ -66,7 +74,9 @@ $ git push -u origin main</code></pre>
             </div>
         </div>
     </section>
+    <!-- steps section end -->
 
+    <!-- info section start -->
     <section class="footer-info">
         <div class="container">
             <h2>Now that you're up and running, here are a few things you should know.</h2>
@@ -86,11 +96,14 @@ $ git push -u origin main</code></pre>
             </div>
         </div>
     </section>
+    <!-- info section end -->
 
+    <!-- footer section start -->
     <footer>
         <div class="container">
             <p>&copy; 2024 GitHub, Inc. Terms Privacy Security Contact</p>
         </div>
     </footer>
+    <!-- footer section end -->
 </body>
 </html>
