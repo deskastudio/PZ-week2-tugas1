@@ -21,10 +21,15 @@ body {
     border-radius: 4px;
     font-size: 12px;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.help-link:hover {
+    color: #fff;
 }
 
 .container {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -34,6 +39,14 @@ header {
     background-color: #222222;
     color: white;
     padding: 50px 0;
+    position: relative;
+    height: 675px;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
 }
 
 header h1 {
@@ -62,10 +75,16 @@ header a {
     color: #ffff;
 }
 
-header .header-image {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 600px;
+.header-image {
+    position: absolute; /* Posisi gambar absolute berdasarkan .container */
+    bottom: 0; /* Posisi gambar di bagian paling bawah */
+    left: 50%; /* Tempatkan di tengah secara horizontal */
+    transform: translateX(-50%); /* Geser gambar agar tepat di tengah */
+    max-width: 80%; /* Atur lebar gambar */
+    height: auto; /* Jaga proporsi gambar */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    width: 50rem;
 }
 
 .get-started {
@@ -120,29 +139,66 @@ header .header-image {
     font-size: 1.1rem;
 }
 
-.buttons .primary {
-    background-color: #28a745;
-    color: white;
-}
-
-.buttons .secondary {
-    background-color: #f6f8fa;
-    color: #24292e;
-}
-
 .steps {
     padding: 50px 0;
 }
 
+.steps .step {
+    border: 1px solid #ddd;
+    position: relative;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 0 20px;
+}
+
+.steps .step1 {
+    border: 1px solid #ddd;
+    position: relative;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 0 20px;
+}
+
+.steps .step .step-number {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #327fc7;
+    border-radius: 200px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    text-align: center;
+}
+
+.steps .step1 .step-number {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #327fc7;
+    border-radius: 200px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    text-align: center;
+}
+
 .steps .step1 {
     text-align: center;
-    display: flex;  
+    display: flex;
     background-color: white;
     margin-bottom: 40px;
+    border: 0.5px solid #ddd;
+    border-radius: 5px;
 }
 
 .steps .step1 .textRepo {
-    border: 0.5px solid gray;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -170,7 +226,7 @@ header .header-image {
 
 .steps .step1 img {
     width: 50%;
-    border: 0.5px solid gray;
+    border-radius: 5px;
 }
 
 .steps .step {
@@ -180,39 +236,119 @@ header .header-image {
     padding: 25px;
 }
 
-.steps .step h3 {
-    font-size: 1.5rem;
+.steps .step .title {
+    font-size: 2rem;
+    font-weight: 200;
     margin-bottom: 10px;
 }
 
-.steps .step p {
-    font-size: 1.1rem;
+.steps .step .description {
+    font-size: 1.2rem;
+    margin: 30px 120px 30px;
 }
 
-.steps .step img {
-    max-width: 100%;
-    margin-top: 20px;
+.steps .options {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
 }
 
-pre {
-    background-color: #f6f8fa;
+.steps .step .command-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.steps .step .command-container .command1,
+.steps .step .command-container .command2,
+.steps .step .command-container .command3,
+.steps .step .command-container .command4 {
+    margin: 0 auto; /* Menjadikan elemen berada di tengah secara horizontal */
+}
+
+.steps .step .command-container .command1 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0.5px solid gray;
+    width: 75%;
     padding: 10px;
-    border-radius: 5px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: left;
-    font-family: monospace;
-    color: #24292e;
+    height: 25px;
+    background-color: gray;
+}
+
+.steps .step .command-container .command2 {
+    color: #EEEB82;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0.5px solid gray;
+    width: 75%;
+    padding: 25px;
+    height: 75px;
+    text-align: start;
+    background-color: #3D3D3D;
+}
+
+.steps .step .command-container .command3 {
+    color: #EEEB82;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0.5px solid gray;
+    width: 75%;
+    padding: 25px;
+    height: 100px;
+    text-align: start;
+    background-color: #3D3D3D;
+}
+
+.steps .step .command-container .command4 {
+    color: #EEEB82;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 75%;
+    padding: 25px;
+    height: 130px;
+    text-align: start;
+    background-color: #3D3D3D;
+}
+
+
+.steps .options button {
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 0.5px solid gray;
+    background-color: white;
+}
+
+.steps .options .terminal {
+    background-color: #327FC7;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.steps .options .idk {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .footer-info {
     text-align: center;
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 .footer-info h2 {
-    margin-bottom: 20px;
+    margin: 50px auto 0 auto;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: center;
+    max-width: 910px;
+    color: #333;
 }
 
 .footer-info .info-blocks {
@@ -224,23 +360,178 @@ pre {
 .footer-info .info {
     width: 30%;
     padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.footer-info .info img {
+    width: 150px;
+    margin-bottom: 20px;
+    border: 0.5px solid gray;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.icon-container i {
+    font-size: 40px;
+    color: #327FC7;
+}
+
+.icon-container:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
 .footer-info .info h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    color: #4183C4;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.footer-info .info a {
+    color: #327FC7;
+    text-decoration: none;
 }
 
 footer {
-    background-color: #24292e;
-    color: white;
+    background-color: white;
     text-align: center;
     padding: 20px 0;
+    border-top: 1px solid #ddd;
 }
 
-footer p {
-    font-size: 0.9rem;
+footer .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
 }
+
+footer .container-footer .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .container-footer .info h1 {
+    font-size: 12px;
+    font-weight: 200;
+    color: #777;
+}
+
+footer .container-footer .info a {
+    font-size: 12px;
+    font-weight: 200;
+    color: #4183C4;
+    text-decoration: none;
+}
+
+footer .container-footer .info-logo i {
+    font-size: 25px;
+    color: #ccc;
+}
+
+/* Aturan CSS untuk layar lebar (desktop) */
+@media screen and (min-width: 1200px) {
+
+    
+  }
+  
+  /* Aturan CSS untuk layar menengah (tablet) */
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  }
+  
+  /* Aturan CSS untuk layar kecil (ponsel) */
+  @media screen and (max-width: 767px) {
+    .container h2 {
+        font-size: 40px;
+    }
+
+    .get-started .container .buttons {
+        flex-direction: column;
+    }
+
+    .steps .step1 {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .steps .step1 img {
+        width: 100%;
+    }
+
+    .steps .step1 .textRepo h1 {
+        font-size: 25px;
+    }
+
+    .steps .step1 .textRepo h5 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .steps .step1 .textRepo p {
+        font-size: 10px;
+    }
+
+    .steps .step {
+        padding: 30px 0;
+    }
+
+    .steps .step .options {
+        flex-direction: column;
+    }
+
+    .steps .step .description {
+        font-size: 15px;
+        margin: 30px 20px 30px;
+    }
+
+    .steps .step .command-container .command2,
+    .steps .step .command-container .command3,
+    .steps .step .command-container .command4 {
+        display: flex;
+        flex-wrap: wrap;
+        height: 200px;
+    }
+
+    .footer-info .container h2 {
+        font-size: 30px;
+    }
+
+    .footer-info .info-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info .info {
+        width: 100%;
+        padding: 20px;
+    }
+
+    footer .container-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        width: 100%;
+    }
+    
+  }
